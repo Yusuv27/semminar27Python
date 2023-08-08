@@ -30,7 +30,6 @@ for y in range(0,x1+x2):
                 list_3[i]=list_3[i-1]
                 list_3[i-1]=numberX
 print(list_3)
-
 #задание 24
 number24=int(input("Введите количество кустов: "))
 num24=[]
@@ -39,7 +38,7 @@ for i in range(0,number24):
     num24.append(number)
 max=0
 for i in range (0,len(num24)):
-    if i !=0 and i != len(num24) and i != len(num24)-1 and i !=len(num24)-2:
+    if i !=0 and i != len(num24) and i != len(num24)-1 and i !=len(num24)-2 and i != 1:
         sum=int(num24[i]+num24[i+1]+num24[i+2])
         if max<sum:
             max=sum
@@ -47,5 +46,7 @@ for i in range (0,len(num24)):
         sum=int(num24[0]+num24[len(num24)-1]+num24[len(num24)-2])
         if sum > max:
             max=sum
-        
+        sum=int(num24[0]+num24[1]+num24[len(num24)-1])
+        if sum > max:
+            max=sum
 print(max)
